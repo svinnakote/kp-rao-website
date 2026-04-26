@@ -2,10 +2,10 @@
    Future WordPress mapping: style.css variables, base, components, sections. */
 :root {
   --color-navy-950: #061827;
-  --color-navy-900: #0b2238;
-  --color-navy-800: #12314d;
-  --color-teal-700: #197f8f;
-  --color-teal-600: #279cab;
+  --color-navy-900: #092136;
+  --color-navy-800: #123553;
+  --color-teal-700: #147d8b;
+  --color-teal-600: #259dab;
   --color-teal-100: #e6f6f7;
   --color-gold-500: #c6a15b;
   --color-gold-100: #f5eddd;
@@ -19,8 +19,8 @@
   --container: 1160px;
   --radius-sm: 8px;
   --radius-md: 10px;
-  --shadow-soft: 0 14px 34px rgba(10, 34, 55, 0.08);
-  --shadow-strong: 0 22px 54px rgba(6, 24, 39, 0.16);
+  --shadow-soft: 0 16px 40px rgba(10, 34, 55, 0.09);
+  --shadow-strong: 0 24px 60px rgba(6, 24, 39, 0.18);
 }
 
 * {
@@ -107,8 +107,8 @@ h3 {
 }
 
 h1 {
-  margin-bottom: 22px;
-  font-size: clamp(3rem, 5.5vw, 5.55rem);
+  margin-bottom: 20px;
+  font-size: clamp(3rem, 5vw, 5.15rem);
   font-weight: 800;
 }
 
@@ -150,13 +150,15 @@ p {
 }
 
 .button--primary {
-  color: var(--color-white);
-  background: var(--color-navy-900);
-  box-shadow: none;
+  color: var(--color-navy-950);
+  border-color: var(--color-gold-500);
+  background: var(--color-gold-500);
+  box-shadow: 0 12px 28px rgba(6, 24, 39, 0.18);
 }
 
 .button--primary:hover {
-  background: var(--color-navy-950);
+  border-color: var(--color-white);
+  background: var(--color-white);
 }
 
 .button--ghost {
@@ -167,6 +169,10 @@ p {
 .button--ghost:hover {
   color: var(--color-navy-900);
   background: var(--color-white);
+}
+
+.hero__actions .button {
+  min-width: 178px;
 }
 
 .button--outline {
@@ -256,12 +262,12 @@ p {
 }
 
 .section--hero {
-  min-height: 88vh;
+  min-height: 86vh;
   overflow: hidden;
   padding: 0;
   color: var(--color-white);
   background:
-    linear-gradient(105deg, rgba(11, 34, 56, 0.97) 0%, rgba(18, 49, 77, 0.96) 54%, rgba(25, 127, 143, 0.94) 100%),
+    linear-gradient(108deg, rgba(6, 24, 39, 0.98) 0%, rgba(9, 33, 54, 0.97) 48%, rgba(20, 125, 139, 0.94) 100%),
     var(--color-navy-900);
 }
 
@@ -269,12 +275,12 @@ p {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.72fr);
-  gap: clamp(40px, 6vw, 76px);
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.7fr);
+  gap: clamp(42px, 6vw, 80px);
   align-items: center;
-  min-height: 88vh;
-  padding-top: 132px;
-  padding-bottom: 82px;
+  min-height: 86vh;
+  padding-top: 128px;
+  padding-bottom: 76px;
 }
 
 .hero__content {
@@ -287,14 +293,14 @@ p {
 }
 
 .hero__tagline {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.08rem;
   font-weight: 800;
 }
 
 .hero__statement {
-  max-width: 610px;
+  max-width: 640px;
   margin-bottom: 16px;
   color: rgba(255, 255, 255, 0.82);
   font-size: 1.08rem;
@@ -310,7 +316,7 @@ p {
 .trust-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 22px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -319,20 +325,16 @@ p {
 .trust-badges li {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  min-height: 38px;
-  padding: 8px 13px;
-  color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 999px;
-  background: transparent;
-  font-size: 0.9rem;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
   font-weight: 800;
 }
 
 .trust-badges li::before {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
   content: "";
   border-radius: 50%;
   background: var(--color-gold-500);
@@ -340,8 +342,8 @@ p {
 
 .section--metrics {
   z-index: 2;
-  padding: 0 0 34px;
-  margin-top: -44px;
+  padding: 0 0 42px;
+  margin-top: -42px;
 }
 
 .metric-strip {
@@ -356,7 +358,7 @@ p {
 }
 
 .metric-card {
-  padding: 28px 24px;
+  padding: 24px 24px;
   border-right: 1px solid var(--color-border);
 }
 
@@ -368,7 +370,7 @@ p {
   display: block;
   margin-bottom: 6px;
   color: var(--color-navy-900);
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
   line-height: 1;
 }
 
@@ -397,9 +399,9 @@ p {
 .advisor-profile-card__portrait {
   display: grid;
   place-items: center;
-  min-height: 250px;
+  min-height: 230px;
   background:
-    linear-gradient(145deg, rgba(230, 246, 247, 0.92), rgba(255, 255, 255, 0.94)),
+    linear-gradient(145deg, rgba(230, 246, 247, 0.94), rgba(255, 255, 255, 0.96)),
     var(--color-teal-100);
 }
 
@@ -418,7 +420,7 @@ p {
 }
 
 .advisor-profile-card__body {
-  padding: 30px 30px 24px;
+  padding: 28px 30px 24px;
   text-align: center;
 }
 
@@ -438,6 +440,35 @@ p {
 
 .advisor-profile-card p {
   margin-bottom: 0;
+}
+
+.advisor-profile-card__facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0 0;
+}
+
+.advisor-profile-card__facts div {
+  padding: 14px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-cream);
+}
+
+.advisor-profile-card__facts dt {
+  margin-bottom: 4px;
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.advisor-profile-card__facts dd {
+  margin: 0;
+  color: var(--color-navy-900);
+  font-size: 1.1rem;
+  font-weight: 900;
 }
 
 .advisor-profile-card__footer {
@@ -462,7 +493,7 @@ p {
 }
 
 .section-header {
-  margin-bottom: 46px;
+  margin-bottom: 48px;
 }
 
 .section-header--center {
@@ -503,12 +534,12 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-white);
-  box-shadow: none;
+  box-shadow: 0 10px 26px rgba(10, 34, 55, 0.045);
 }
 
 .service-card {
   position: relative;
-  min-height: 320px;
+  min-height: 324px;
   padding: 30px;
   overflow: hidden;
 }
@@ -577,7 +608,6 @@ p {
 .trust-item {
   display: block;
   padding: 28px;
-  box-shadow: none;
 }
 
 .trust-item span {
@@ -603,7 +633,6 @@ p {
 .post-card {
   min-height: 250px;
   padding: 30px;
-  box-shadow: none;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
