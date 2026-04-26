@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216" height="88" viewBox="0 0 216 88" role="img" aria-labelledby="title desc">
+  <title id="title">KP Rao Financial Advisory placeholder logo</title>
+  <desc id="desc">A simple navy, teal, and gold monogram for KP Rao.</desc>
+  <rect width="216" height="88" fill="none"/>
+  <g transform="translate(8 16)">
+    <path d="M12 44V8h8v16L34 8h10L28 26l17 18H34L20 28v16z" fill="#0d2740"/>
+    <path d="M48 44V8h16c8 0 14 5 14 12s-6 12-14 12h-8v12zm8-19h7c4 0 7-2 7-5s-3-5-7-5h-7z" fill="#0d2740"/>
+    <path d="M10 54h70" stroke="#35a8b5" stroke-width="4" stroke-linecap="round"/>
+    <path d="M16 62h50" stroke="#c9a24d" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(96 22)">
+    <text x="0" y="19" fill="#0d2740" font-family="Georgia, serif" font-size="24" font-weight="700">KP RAO</text>
+    <text x="1" y="39" fill="#0d2740" font-family="Arial, sans-serif" font-size="8" font-weight="700" letter-spacing="1.2">FINANCIAL ADVISORY</text>
+  </g>
+</svg>
